@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -21,4 +22,11 @@ public class Sprint {
 
     @CreatedDate
     private LocalDateTime createdAt;
+
+    private LocalDate date;
+
+    public Sprint(final LocalDateTime createdAt, final LocalDate date) {
+        this.createdAt = createdAt;
+        this.date = date;
+    }
 }
