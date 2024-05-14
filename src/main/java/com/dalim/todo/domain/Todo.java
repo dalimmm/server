@@ -37,4 +37,10 @@ public class Todo {
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    public Todo(final Sprint sprint, final String content, final boolean done) {
+        this.sprint = sprint;
+        this.content = content;
+        this.done = done;
+    }
 }

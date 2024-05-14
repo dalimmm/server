@@ -18,8 +18,8 @@ public class TodoController {
     private final TodoService todoService;
 
     @PostMapping
-    public ResponseEntity<Void> createTodo(@RequestBody TodoRequest request) {
-        final Long id = 0L;
+    public ResponseEntity<Void> createTodo(@RequestBody final TodoRequest request) {
+        final Long id = todoService.create(request);
         return ResponseEntity.created(URI.create("/todos/" + id)).build();
     }
 }
